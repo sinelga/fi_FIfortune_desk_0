@@ -20,29 +20,29 @@ function browserSyncInit(baseDir, files, browser) {
     };
   }
 
-  browserSync.instance = browserSync.init(files, {
-    startPath: '/',
-    server: {
-      baseDir: baseDir,
-      middleware: [modRewrite(['!\\.\\w+$ /index.html [L] '])],
-      routes: routes
-    },
-    browser: browser
-  });
-
 //  browserSync.instance = browserSync.init(files, {
-//    startPath: '/index.html',
+//    startPath: '/',
 //    server: {
 //      baseDir: baseDir,
-//      middleware: [
-//        middleware,
-//        modRewrite([
-//          '!\\.\\w+$ /index.html [L]'
-//        ])
-//      ]
+//      middleware: middleware,
+//      routes: routes
 //    },
 //    browser: browser
 //  });
+
+  browserSync.instance = browserSync.init(files, {
+    startPath: '/index.html',
+    server: {
+      baseDir: baseDir,
+      middleware: [
+        middleware,
+        modRewrite([
+          '!\\.\\w+$ /index.html [L]'
+        ])
+      ]
+    },
+    browser: browser
+  });
 
 
 }
