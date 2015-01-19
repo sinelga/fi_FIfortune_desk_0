@@ -20,7 +20,7 @@ angular.module('fiFifortuneDesk0')
 				  				  				  
 			  });
 	  			  
-	  	}
+	  	};
 	  
 	  this.getJSONP= function(url) {
 	  	  
@@ -30,6 +30,6 @@ angular.module('fiFifortuneDesk0')
 		  	
 	  		});
 	  
-	  	}
+	  	};
 	  	  	  	  	  
   });

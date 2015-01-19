@@ -12,9 +12,7 @@ angular.module('fiFifortuneDesk0')
 		  	
 	  		});
 	  
-	  }
-	
-	
-	
+	  };
+		
 	
 });

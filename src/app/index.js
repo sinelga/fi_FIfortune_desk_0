@@ -14,7 +14,7 @@ angular.module('fiFifortuneDesk0', ['ngAnimate', 'ngCookies', 'ui.router', 'mm.f
         });
 
     $urlRouterProvider.otherwise('/');
-    $locationProvider.html5Mode(true)
+    $locationProvider.html5Mode(true);
     
   })
 ;
