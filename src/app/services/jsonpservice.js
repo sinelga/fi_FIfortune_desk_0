@@ -12,24 +12,19 @@ angular.module('fiFifortuneDesk0')
 	  
 	  	  
 	  this.getJSON = function(url) {
-	  	  
-	  		
+	  	  	  		
 			  return $http.get(url).then(function(response){
-  				  
+				  
 				  return response.data;				  
 				  				  				  
+			  },function (httpError,$state) {
+				  
+				  console.log(httpError);
+				  $state.go('home');
+				  				  
 			  });
 	  			  
 	  	};
-	  
-	  this.getJSONP= function(url) {
-	  	  
-	  		return $http.jsonp(url).success(function(response){
 
-	  			return response;
-		  	
-	  		});
-	  
-	  	};
 	  	  	  	  	  
   });
