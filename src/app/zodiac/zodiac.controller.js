@@ -6,7 +6,7 @@ angular.module('fiFifortuneDesk0')
 	  $scope.loadOK = false;
 	  var pathOK = false;
 	  var zodiacvalue;
-	  
+	  	  
 	  var zodiacName = $location.path().split('/')[2];
 	  
 	  var allzodiacs =zodiacmakerService.getZodiacs();
@@ -21,11 +21,7 @@ angular.module('fiFifortuneDesk0')
 		  }
 		  		  
 	  });
-	  
-	  
-	  
-	  
-	  
+	  	  
 	  
 	  if (pathOK) {
 		  
@@ -49,9 +45,7 @@ angular.module('fiFifortuneDesk0')
 			  
 		  };
 		  allfortunetellers();
-		  
-		  
-		  
+		  		  
 		  		  
 		  	$scope.zodiac = zodiacvalue;
 			

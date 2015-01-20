@@ -34,21 +34,21 @@
  
         <img class="right" ng-src="assets/images/{{zodiac.image}}.png" alt="{{zodiac.name}}">
         <!-- <div class="caption"> -->
-        <div class="fontSize170">
-          <h3>{{zodiac.name}}</h3>
+        
+          <p class='bigname'>{{zodiac.name}}</p>
           
           	<div ng-if="!loadOK" >
 				
-				<img class="bigspinner" ng-src="assets/images/spiffygif.gif" alt="{{zodiac.name}}">...Odotta...
+				<img class="bigspinner" ng-src="assets/images/spiffygif.gif" alt="{{zodiac.name}}"> ...Odotta...
 
  			</div>
-                 
+     
   			<div ng-repeat="info in extinfo.query.results.p " >
           		<p class="fontSize">{{info | check_if_text}}</p>
           
            </div>
          
-        </div> 
+        
  
 </div>
 

@@ -12,33 +12,27 @@
   <div ng-include="'components/navbar/navbar.html'"></div>
   
   <p>
-
   
 <div class="row">
 
 	<div class="large-12 columns">
 	
-		<div  ng-repeat="fortuneteller in allfortunetellers " >
+		<div ng-repeat="fortuneteller in allfortunetellers"  ng-click="selectFortuneteller(fortuneteller)">
 				
 				
-				<div class="row">
+			<div class="row">
 				<div class="small-8 columns">				
-  				<img ng-src="assets/images/shadow-fortuneteller{{fortuneteller.Id}}.jpg"/>
+  					<img ng-src="assets/images/shadow-fortuneteller{{fortuneteller.Id}}.jpg"/>
   				</div>
 				<div class="small-4 columns">
-				<div class='taillerinfo'>
-					<p class='bigphone'>{{fortuneteller.Phone}}</p>
-					<div class='bigname'>{{fortuneteller.Name}}</div>
-					<div class='bigname'>{{fortuneteller.Location}} </div>
+					<div class='taillerinfo'>
+						<p class='bigphone'>{{fortuneteller.Phone}}</p>
+						<div class='bigname'>{{fortuneteller.Name}}</div>
+						<div class='bigname'>{{fortuneteller.Location}} </div>
+					</div>
 				</div>
-				</div>
-				
-				<div class="row">				
-				
-		</div>
 
-
-	</div>
+			</div>
 
 </div>
 
