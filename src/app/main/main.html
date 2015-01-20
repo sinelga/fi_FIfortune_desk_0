@@ -10,29 +10,105 @@
 <div class="container">
 
   <div ng-include="'components/navbar/navbar.html'"></div>
+  
+  <p>
+
+  
+<div class="row">
+
+	<div class="large-12  columns">
+	
+		<div  ng-repeat="fortuneteller in allfortunetellers " >
+				
+				
+				<div class="row">
+				<div class="small-8 columns">				
+  				<img ng-src="assets/images/shadow-fortuneteller{{fortuneteller.Id}}.jpg"/>
+  				</div>
+				<div class="small-4 columns">
+				<div class='taillerinfo'>
+					<p class='bigphone'>{{fortuneteller.Phone}}</p>
+					<div class='bigname'>{{fortuneteller.Name}}</div>
+					<div class='bigname'>{{fortuneteller.Location}} </div>
+				</div>
+				</div>
+				
+				<div class="row">
+				
+				
+				
+				
+		</div>
+
+
+	</div>
+
+</div>
+
+<!-- 
+<div class="row" ng-repeat="fortuneteller in allfortunetellers ">
+
+<div class="small-10 columns">
+
+<img class='left' ng-src="assets/images/shadow-fortuneteller{{fortuneteller.Id}}.jpg"/>
+
+</div>
+
+<div class="small-2 columns">2 columns</div>
 
 
 
+</div>
+ -->
 
 
-  <div class="row">
-    <div class="large-12 large-text-center columns">
-      <div class="panel">
-      
-              <img class="right" ng-src="assets/images/{{zodiac.image}}.png" alt="{{zodiac.name}}">
-        <div class="caption">
-          <h3>{{zodiac.name}}</h3>
-          <p>{{zodiac.defzodiac}}</p>
-          
-        </div>
-        
-      </div>
-    </div>
+
+<!--  
+<div class="row">
+  <div class="small-12 small-centered columns">
+    <ul class="small-block-grid-4 large-block-grid-4 my-grid">
+    			<div ng-repeat="fortuneteller in allfortunetellers " >
+				
+				<li>				
+  				<img ng-src="assets/images/shadow-fortuneteller{{fortuneteller.Id}}.jpg"/>
+  				
+  				</li>
+			
+
+		</div>
+
+    </ul>
   </div>
+</div>
+
+ -->
 
  
-</div>
+
+  
+<!--     
+      		<div class="row" >
+      		   			
+      			<div ng-repeat="fortuneteller in allfortunetellers"class="large-4 large-text-center columns">
+      			
+      			
+
+  					<img class="th [radius]" ng-src="assets/images/shadow-fortuneteller{{fortuneteller.Id}}.jpg"/>
+  					
+
+  				</div>
+  				<div ng-repeat="fortuneteller in allfortunetellers" class="large-4 large-text-center columns">
+  					
+  					
+  					{{fortuneteller.Name}}
+  				
+  				
+  				</div>			
+        
+      		</div>
+      		 -->
+
+</div><!-- container -->
 
 </div>
-
 </div>
