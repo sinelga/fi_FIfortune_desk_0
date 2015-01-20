@@ -23,9 +23,37 @@ angular.module('fiFifortuneDesk0')
 	  });
 	  
 	  
+	  
+	  
+	  
+	  
 	  if (pathOK) {
+		  
+		  
+		  var allfortunetellers = function() {
+			  
+			  jsonpService.getJSON('http://'+$location.host()+':80/fortunetellers').then(function(data) {
+				  
+				  
+				  $scope.allfortunetellers =data;
+				  
+				    var rand = Math.floor(Math.random() *data.length);	    
+				    $scope.fortuneteller = data[rand];
+				  
+								  
+				  
+			  },function(error) {
+				  
+			  });
+			  
+			  
+		  };
+		  allfortunetellers();
+		  
+		  
+		  
 		  		  
-		  $scope.zodiac = zodiacvalue;
+		  	$scope.zodiac = zodiacvalue;
 			
 		  	var urllink = 'http://'+$location.host()+':80/zodiacinfo?extpath=zodiac/'+zodiacvalue.name;
 			
