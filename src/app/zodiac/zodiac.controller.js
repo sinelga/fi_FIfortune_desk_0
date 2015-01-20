@@ -1,12 +1,31 @@
 'use strict';
 
 angular.module('fiFifortuneDesk0')
-  .controller('ZodiacCtrl', function ($scope,$location,$state,zodiacmakerService,jsonpService) {
+  .controller('ZodiacCtrl', function ($scope,$location,$state,$stateParams,$timeout,zodiacmakerService,jsonpService) {
 	  
 	  $scope.loadOK = false;
 	  var pathOK = false;
 	  var zodiacvalue;
-	  	  
+	  
+	  var fortunetellerSelected = false;
+	  
+	  console.log($location.path());
+	  
+	  console.log($stateParams.sign);
+	  
+	  
+	  $scope.$on('selectfortuneteller', function(event, args) {
+
+		    console.log(args.fortuneteller.Name);
+		    
+		    $scope.fortuneteller = args.fortuneteller;
+		    fortunetellerSelected = true;
+		    		    		    
+		    // do what you want to do
+	  });
+	  
+	  
+	  
 	  var zodiacName = $location.path().split('/')[2];
 	  
 	  var allzodiacs =zodiacmakerService.getZodiacs();
@@ -25,6 +44,9 @@ angular.module('fiFifortuneDesk0')
 	  
 	  if (pathOK) {
 		  
+		  $timeout(function() {
+		  
+		  if (fortunetellerSelected === false) {
 		  
 		  var allfortunetellers = function() {
 			  
@@ -45,6 +67,10 @@ angular.module('fiFifortuneDesk0')
 			  
 		  };
 		  allfortunetellers();
+		  
+	  	}
+		  
+		  },1000);
 		  		  
 		  		  
 		  	$scope.zodiac = zodiacvalue;

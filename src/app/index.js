@@ -11,6 +11,7 @@ angular.module('fiFifortuneDesk0', ['ngAnimate', 'ngCookies', 'ui.router', 'mm.f
           url: '/zodiac/:sign',
           templateUrl: 'app/zodiac/zodiac.html',
           controller: 'ZodiacCtrl'
+
         });
 
     $urlRouterProvider.otherwise('/');
