@@ -9,19 +9,13 @@ angular.module('fiFifortuneDesk0')
 	  
 	  var fortunetellerSelected = false;
 	  
-	  console.log($location.path());
-	  
-	  console.log($stateParams.sign);
-	  
 	  
 	  $scope.$on('selectfortuneteller', function(event, args) {
 
-		    console.log(args.fortuneteller.Name);
-		    
+
 		    $scope.fortuneteller = args.fortuneteller;
 		    fortunetellerSelected = true;
-		    		    		    
-		    // do what you want to do
+
 	  });
 	  
 	  

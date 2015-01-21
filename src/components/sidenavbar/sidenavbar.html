@@ -1,5 +1,6 @@
 <div ng-controller="SidenavbarCtrl">
 
+
 <ul class="side-nav"  ng-repeat="zodiac in zodiacs">
   <li><a ui-sref="zodiac({sign:zodiac.name})" ng-click="selectZodiac(zodiac)"><img ng-src="assets/images/{{zodiac.image}}.png" >{{zodiac.name}}</a></li>
  

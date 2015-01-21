@@ -1,4 +1,4 @@
-
+<!--  
 <nav class="top-bar" data-topbar role="navigation" ng-controller="NavbarCtrl">
   <ul class="title-area">
     <li class="domain"> {{domain}} </li>
@@ -11,4 +11,31 @@
       <li><a ui-sref="home" >Nykyinen päivämäärä: {{ date | date:'dd-MM-yyyy' }}</a></li>
     </ul>
   </section>
-</nav>
+</nav> -->
+ 
+ <!-- <div class="panel callout radius" ng-controller='NavbarCtrl'> -->
+ <div ng-controller='NavbarCtrl'>
+ 
+ <div ng-switch on="state">
+ 
+ 
+ <div ng-switch-when="home">
+ <div class='mediumname right'> Tanään: {{ date | date:'dd-MM-yyyy' }}</div>
+ <img class='left paddingRigth' alt="" ng-src="assets/images/start_teller.jpg">
+ </div>
+ <div ng-switch-default>
+ 	<a  ui-sref="home" class="button round right">Etusivu</a>
+ </div>
+
+</div>
+
+ <ul>
+ 
+ 	<li> <div class='mediumphone'>0700-95498</div> <div class='mediumname'><- Kuukausihoroskooppi</div></li>
+ 	<li> <div class='mediumphone'>0700-95516</div> <div class='mediumname'><- Viikkohoroskooppi </div></li>
+ 
+ </ul>
+ 
+
+ 
+ </div>
