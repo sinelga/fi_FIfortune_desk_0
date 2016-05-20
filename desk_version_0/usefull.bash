@@ -29,11 +29,11 @@ var webpack = require('webpack');
 module.exports = {
                 entry: {
                     app: [ './src/app.js'],
-                        vendor: ["react","react-router","react-bootstrap","node-uuid","react-document-meta"],
+                        vendor: ["react","react-router","react-bootstrap","react-document-meta"],
                   },
    output: {
      path: __dirname + '/dist/',
-     filename: 'deskbundle.js',
+     filename: 'deskfortunebundle.js',
      publicPath: '/'
    },
    module: {
@@ -43,6 +43,6 @@ module.exports = {
    },
    
    plugins: [
-             new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.deskbundle.js")
+             new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.deskfortunebundle.js")
            ]
 };
